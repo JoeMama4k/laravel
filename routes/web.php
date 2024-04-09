@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/users/{user}', [UserController::class, 'index']);
+
+Route::get('/users', [UserController::class, 'showAll']);
