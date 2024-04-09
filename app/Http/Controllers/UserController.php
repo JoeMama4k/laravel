@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(string $username): string
     {
-        return '<h1>Users Page</h1>';
+        return '<h1>This is the page for ' . $username . '</h1>';
     }
 }
