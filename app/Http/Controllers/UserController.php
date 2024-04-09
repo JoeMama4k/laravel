@@ -8,6 +8,6 @@ class UserController extends Controller
 {
     public function index()
     {
-        return '<h1>Users Page/>';
+        return '<h1>Users Page</h1>';
     }
 }
