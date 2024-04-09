@@ -9,7 +9,8 @@ class UserController extends Controller
 {
     public function index(string $username): string
     {
-        return '<h1>This is the page for ' . $username . '</h1>';
+        $user = User::where('name', $username)->first();
+        return '<h1>ID:' . $user->id . '</h1> <h1>Email: ' . $user->email . '</h1>';
     }
 
     public function showAll(): string
@@ -19,7 +20,6 @@ class UserController extends Controller
 
         foreach ($users as $user) {
             $output .= '<h1>User: ' . $user->name . '</h1>';
-            $output .= '<br>'; // Add a page break after each user
         }
 
         return $output;
